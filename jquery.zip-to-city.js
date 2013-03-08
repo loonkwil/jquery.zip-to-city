@@ -865,7 +865,6 @@
 
 
   var $ = window.jQuery;
-  var $zipInput, $cityInput;
 
   /**
    * Visszaadja a keresett elem index-et a megadott tombben, ha csak egyszer
@@ -934,13 +933,14 @@
    * Iranyitoszam input elhagyasanak esemenykezeloje
    */
   var zipDoneEvent = function() {
+    var $zipInput = $(this);
+    var $cityInput = $zipInput.data('cityInput');
+
     // akkor foglalkozok az esemennyel, ha a varos mezo meg nincs kitoltve
     if( $cityInput.val() !== '' ) { return; }
 
-    var $this = $(this);
-
     // Valoban iranyitoszamot adott-e meg
-    var zip = $this.val().trim();
+    var zip = $zipInput.val().trim();
     if( !/^(?:1(?:[01][1-9]|2[1-3])[0-9]|[2-9][0-9]{3})$/.test(zip) ) {
       return;
     }
@@ -956,11 +956,12 @@
    * Varos input elhagyasanak esemenykezeloje
    */
   var cityDoneEvent = function() {
+    var $cityInput = $(this);
+    var $zipInput = $cityInput.data('zipInput');
+
     if( $zipInput.val() !== '' ) { return; }
 
-    var $this = $(this);
-
-    var city = capitalize($this.val());
+    var city = capitalize($cityInput.val());
 
     var zip = getZipCodeFromCity(city);
     if( zip !== null ) {
@@ -969,13 +970,18 @@
   };
 
   $.fn.zipToCity = function(cityInput) {
-    $zipInput = this;
-    $cityInput = $(cityInput);
+    var $zipInput = this;
+    var $cityInput = $(cityInput);
 
     if( $zipInput.length === 0 || $cityInput.length === 0 ) { return; }
 
-    $zipInput.on('blur', zipDoneEvent);
-    $cityInput.on('blur', cityDoneEvent);
+    $zipInput.
+      data('cityInput', $cityInput).
+      on('blur', zipDoneEvent);
+
+    $cityInput.
+      data('zipInput', $zipInput).
+      on('blur', cityDoneEvent);
 
     return this;
   };

@@ -5,14 +5,22 @@
   <title>Zip to city</title>
 </head>
 <body>
-  Irányítszám: <input type="text" name="zip"><br>
-  Város: <input type="text" name="city">
+  <div>
+    Irányítszám: <input type="text" name="zip1"><br>
+    Város: <input type="text" name="city1">
+  </div>
+
+  <div>
+    Irányítszám: <input type="text" name="zip2"><br>
+    Város: <input type="text" name="city2">
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="../jquery.zip-to-city.js"></script>
   <script type="text/javascript">
     $(function() {
-      $('input[name="zip"]').zipToCity('input[name="city"]');
+      $('input[name="zip1"]').zipToCity('input[name="city1"]');
+      $('input[name="zip2"]').zipToCity('input[name="city2"]');
     });
   </script>
 </body>
