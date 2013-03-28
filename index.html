@@ -3,24 +3,48 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>Zip to city</title>
+  <link rel="stylesheet" href="gh-pages.css">
+  <style>
+    label {
+      display: block;
+    }
+
+    div {
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Irányítószámból város</h1>
+    <a href="http://github.com/loonkwil/zip-to-city">http://github.com/loonkwil/zip-to-city</a>
+  </header>
+
+  <p>
+    Irányítószámból megpróbálja kitalálni a várost. Ha nem egyértelmű (több
+    város tartozik az irányítószámhoz, nem egyértelmű a település
+    elnevezése (pl.: Pécs Hird)), nem csinál semmit.<br>
+    Illetve a városból megpróbálja kitalálni az irányítószámot.<br>
+    Már kitöltött mezőket nem fog felülírni.
+  </p>
+  <pre>$(function() {
+  $('#zip').zipToCity('#city');
+});</pre>
   <div>
-    Irányítszám: <input type="text" name="zip1"><br>
-    Város: <input type="text" name="city1">
+    <label for="zip">Irányítószám</label>
+    <input type="text" name="zip" id="zip" autofocus>
   </div>
 
   <div>
-    Irányítszám: <input type="text" name="zip2"><br>
-    Város: <input type="text" name="city2">
+    <label for="city">Város</label>
+    <input type="text" name="city" id="city">
   </div>
 
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="jquery.zip-to-city.js"></script>
   <script type="text/javascript">
     $(function() {
-      $('input[name="zip1"]').zipToCity('input[name="city1"]');
-      $('input[name="zip2"]').zipToCity('input[name="city2"]');
+      $('#zip').zipToCity('#city');
     });
   </script>
 </body>
