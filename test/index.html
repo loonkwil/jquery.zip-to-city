@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zip To City tests</title>
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-git.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture">
+    <input type="text" name="zip" id="zip">
+    <input type="text" name="city" id="city">
+
+    <input type="text" name="zip2" id="zip2">
+    <input type="text" name="city2" id="city2">
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="../jquery.zip-to-city.js"></script>
+  <script>
+    $(function() {
+      $('#zip').zipToCity('#city');
+      $('#zip2').zipToCity('#city2');
+    });
+  </script>
+
+  <script src="http://code.jquery.com/qunit/qunit-git.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
