@@ -34,4 +34,6 @@ Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
 ```
 
 ## Tesztek futtatása
- 1. open test/index.html
+```bash
+open test/index.html
+```
