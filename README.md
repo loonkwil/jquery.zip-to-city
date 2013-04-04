@@ -11,7 +11,7 @@ honlapjáról](http://www.posta.hu/ugyfelszolgalat/iranyitoszam_kereso)
 származnak.
 Frissítve: 2013. 02. 21.
 
-Példát a script működésére: http://loonkwil.github.com/zip-to-city
+Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
 
 ## Intallálás
 ```html
