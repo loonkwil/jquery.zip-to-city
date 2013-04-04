@@ -1,3 +1,5 @@
+# Zip To City
+
 Magyar irányítószámból megpróbálja kitalálni a várost. Ha nem egyértelmű (több
 város tartozik az irányítószámhoz, nem egyértelmű a település elnevezése (pl.:
 Pécs Hird)), nem csinál semmit.
@@ -11,7 +13,7 @@ Frissítve: 2013. 02. 21.
 
 Példát a script működésére: http://loonkwil.github.com/zip-to-city
 
-# Intallálás
+## Intallálás
 ```html
 <!DOCTYPE html>
 <html>
@@ -30,3 +32,6 @@ Példát a script működésére: http://loonkwil.github.com/zip-to-city
   </script>
 </body>
 ```
+
+## Tesztek futtatása
+ 1. open test/index.html
