@@ -1,5 +1,7 @@
 # Zip To City
 
+[![Build Status](https://travis-ci.org/loonkwil/jquery.zip-to-city.png)](https://travis-ci.org/loonkwil/jquery.zip-to-city)
+
 Magyar irányítószámból megpróbálja kitalálni a várost. Ha nem egyértelmű (több
 város tartozik az irányítószámhoz, nem egyértelmű a település elnevezése (pl.:
 Pécs Hird)), nem csinál semmit.
@@ -14,6 +16,13 @@ Frissítve: 2013. 02. 21.
 Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
 
 ## Intallálás
+
+Követelmények: [Bower](https://github.com/bower/bower)
+
+```bash
+bower install git@github.com:loonkwil/jquery.zip-to-city.git --save
+```
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -23,8 +32,8 @@ Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
   <input type="text" name="zip">
   <input type="text" name="city">
 
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery.zip-to-city.js"></script>
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/jquery.zip-to-city/src/jquery.zip-to-city.js"></script>
   <script type="text/javascript">
     $(function() {
       $('input[name="zip"]').zipToCity('input[name="city"]');
@@ -34,6 +43,8 @@ Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
 ```
 
 ## Tesztek futtatása
-```bash
-open test/index.html
-```
+
+Követelmények: [Grunt](http://gruntjs.com)
+
+ 1. `npm install`
+ 2. `npm test`
