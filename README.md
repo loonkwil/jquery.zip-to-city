@@ -42,6 +42,7 @@ bower install git@github.com:loonkwil/jquery.zip-to-city.git --save
 
 ## Tesztek futtatása
 
-```bash
-open test/index.html
-```
+Követelmények: [Grunt](http://gruntjs.com)
+
+ 1. `npm install`
+ 2. `npm test`
