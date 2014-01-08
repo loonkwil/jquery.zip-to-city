@@ -1,5 +1,7 @@
 # Zip To City
 
+[![Build Status](https://travis-ci.org/loonkwil/jquery.zip-to-city.png)](https://travis-ci.org/loonkwil/jquery.zip-to-city)
+
 Magyar irányítószámból megpróbálja kitalálni a várost. Ha nem egyértelmű (több
 város tartozik az irányítószámhoz, nem egyértelmű a település elnevezése (pl.:
 Pécs Hird)), nem csinál semmit.
