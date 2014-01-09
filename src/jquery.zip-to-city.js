@@ -74,7 +74,7 @@
   var getZipCodeFromCity = function(city) {
     if( city === 'Budapest' ) { return null; }
 
-    var index = getIndex(city, cities);
+    var index = getIndexIfUnique(city, cities);
 
     return (index === null) ? null : zipCodes[index];
   };
