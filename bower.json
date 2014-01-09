@@ -2,7 +2,10 @@
   "name": "jquery.zip-to-city",
   "version": "0.0.3",
   "ignore": [
-    "!src/"
+    "grunt-tasks/",
+    "test/",
+    "*.{json,js,md}",
+    ".*"
   ],
   "dependencies": {
     "jquery": "~2.0"
