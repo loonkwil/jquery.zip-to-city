@@ -1,6 +1,9 @@
 {
   "name": "jquery.zip-to-city",
   "version": "0.0.3",
+  "ignore": [
+    "!src/"
+  ],
   "dependencies": {
     "jquery": "~2.0"
   },
