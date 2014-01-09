@@ -49,3 +49,7 @@ Követelmények: [Grunt](http://gruntjs.com)
 
  1. `npm install`
  2. `npm test`
+
+## Iranyitoszamok frissitese
+
+`grunt update`
