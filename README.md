@@ -33,6 +33,7 @@ bower install git@github.com:loonkwil/jquery.zip-to-city.git --save
   <input type="text" name="city">
 
   <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/jquery.zip-to-city/src/zip-codes.js"></script>
   <script src="bower_components/jquery.zip-to-city/src/jquery.zip-to-city.js"></script>
   <script type="text/javascript">
     $(function() {
@@ -48,3 +49,7 @@ Követelmények: [Grunt](http://gruntjs.com)
 
  1. `npm install`
  2. `npm test`
+
+## Iranyitoszamok frissitese
+
+`grunt update`
