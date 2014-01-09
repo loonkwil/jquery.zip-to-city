@@ -1,4 +1,4 @@
-(function(window, undefined) {
+;(function(window) {
   "use strict";
 
   var $ = window.jQuery;
@@ -26,10 +26,9 @@
    *
    * @param {string|integer} needle
    * @param {array} haystack
-   *
    * @return {integer|null}
    */
-  var getIndex = function(needle, haystack) {
+  var getIndexIfUnique = function(needle, haystack) {
     var index = haystack.indexOf(needle);
     if( index === -1 ) {
       return null;
@@ -40,29 +39,27 @@
   };
 
   /**
-   * Megadott szot nagybetusse teszi, valamit leveszi a felesleges feher
-   *   szokozoket
+   * Megadott szot kezdobetujet nagybetusse teszi, valamit leveszi a felesleges
+   *   feher szokozoket
    *
    * @param {string} str
-   *
    * @return {string}
    */
-  var capitalize = function(str) {
+  var canonicalizeCity = function(str) {
     str = str.trim().toLocaleLowerCase();
-    return str.substr(0,1).toLocaleUpperCase() + str.substr(1);
+    return str.substr(0, 1).toLocaleUpperCase() + str.substr(1);
   };
 
   /**
    * Kikeresi a megadott iranyitoszam alapjan a varos nevet
    *
    * @param {integer} zip
-   *
    * @return {string|null}
    */
   var getCityFromZipCode = function(zip) {
     if( zip < 2000 ) { return 'Budapest'; }
 
-    var index = getIndex(zip, zipCodes);
+    var index = getIndexIfUnique(zip, zipCodes);
 
     return (index === null) ? null : cities[index];
   };
@@ -72,7 +69,6 @@
    *
    * @param {string} city A varosnev nem tartalmazhat felesleges feher
    *   szokozoket. Az elso betunek nagynak, mig a tobbinek kicsinek kell lennie
-   *
    * @return {integer|null}
    */
   var getZipCodeFromCity = function(city) {
@@ -115,7 +111,7 @@
 
     if( $zipInput.val() !== '' ) { return; }
 
-    var city = capitalize($cityInput.val());
+    var city = canonicalizeCity($cityInput.val());
 
     var zip = getZipCodeFromCity(city);
     if( zip !== null ) {
