@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'update-readme', 'Readme.md fajlban szereplo datum frissitese', function() {
       var path = 'Readme.md';
-      var now = grunt.template.today('yyyy. mm. dd');
+      var now = grunt.template.today('yyyy. mm. dd.');
 
       var content = grunt.file.read(path);
       content = content.replace(
