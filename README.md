@@ -20,7 +20,7 @@ Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
 Követelmények: [Bower](https://github.com/bower/bower)
 
 ```bash
-bower install git@github.com:loonkwil/jquery.zip-to-city.git --save
+bower install git://github.com/loonkwil/jquery.zip-to-city.git --save
 ```
 
 ```html
