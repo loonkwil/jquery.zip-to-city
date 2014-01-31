@@ -18,7 +18,7 @@ module.exports = function(grunt) {
    * @return {string}
    */
   var canonicalizeCity = function(str) {
-    str = str.trim().toLocaleLowerCase();
+    str = str.replace(/"/g, '').trim().toLocaleLowerCase();
     return str.substr(0, 1).toLocaleUpperCase() + str.substr(1);
   };
 
