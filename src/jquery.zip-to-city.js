@@ -91,7 +91,7 @@
 
     // Valoban iranyitoszamot adott-e meg
     var zip = $zipInput.val().trim();
-    if( !/^(?:1(?:[01][1-9]|2[1-3])[0-9]|[2-9][0-9]{3})$/.test(zip) ) {
+    if( !/^(?:1(?:[01][0-9]|2[1-3])[0-9]|[2-9][0-9]{3})$/.test(zip) ) {
       return;
     }
     zip = parseInt(zip, 10);
