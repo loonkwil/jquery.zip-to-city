@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     },
     'update-zip-codes': {
       options: {
-        url: 'http://www.posta.hu/static/internet/download/Iranyitoszam_Internet.XLS'
+        url: 'http://www.posta.hu/static/internet/download/Iranyitoszam_Internet.xlsx'
       }
     },
   });

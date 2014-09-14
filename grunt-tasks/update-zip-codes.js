@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
   var http = require('http');
   var request = require('request');
-  var xlsjs = require('xlsjs');
+  var xlsx = require('xlsx');
 
   /**
    * @param {string} str
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         grunt.log.writeln('Fajl beolvasasa');
         var file;
         try {
-          file = xlsjs.read(body, { type: 'binary' });
+          file = xlsx.read(body, { type: 'binary' });
         } catch(e) {
           var msg = e.message || e;
           return grunt.fail.fatal(
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
           }).
           map(function(targetSheet) {
             var sheetData = file.Sheets[targetSheet];
-            var lines = xlsjs.utils.sheet_to_row_object_array(sheetData);
+            var lines = xlsx.utils.sheet_to_row_object_array(sheetData);
 
             if( /települések/i.test(targetSheet) ) {
               lines.

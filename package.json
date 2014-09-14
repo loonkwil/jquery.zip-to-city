@@ -18,6 +18,6 @@
     "grunt-contrib-jshint": "~0.8",
     "grunt-bump": "~0.0.13",
     "request": "~2.31",
-    "xlsjs": "~0.5"
+    "xlsx": "^0.7"
   }
 }
