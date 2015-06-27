@@ -24,23 +24,23 @@ bower install git://github.com/loonkwil/jquery.zip-to-city.git --save
 ```
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+<!doctype html>
+<html lang=hu>
+  <meta charset=utf-8>
+  <title></title>
+
   <input type="text" name="zip">
   <input type="text" name="city">
 
-  <script src="bower_components/jquery/jquery.js"></script>
-  <script src="bower_components/jquery.zip-to-city/src/zip-codes.js"></script>
-  <script src="bower_components/jquery.zip-to-city/src/jquery.zip-to-city.js"></script>
-  <script type="text/javascript">
-    $(function() {
+  <script src=bower_components/jquery/jquery.js></script>
+  <script src=bower_components/jquery.zip-to-city/src/zip-codes.js></script>
+  <script src=bower_components/jquery.zip-to-city/src/jquery.zip-to-city.js></script>
+  <script>
+    $(function whenTheDOMIsReady() {
       $('input[name="zip"]').zipToCity('input[name="city"]');
     });
   </script>
-</body>
+</html>
 ```
 
 ## Tesztek futtatása
