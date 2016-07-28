@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         grunt.log.writeln('Fajl beolvasasa');
         var file;
         try {
-          file = xlsx.read(body, { type: 'binary' });
+          file = xlsx.read(body);
         } catch(e) {
           var msg = e.message || e;
           return grunt.fail.fatal(
