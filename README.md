@@ -11,7 +11,7 @@ Már kitöltött mezőket nem fog felülírni.
 Adatok a [Magyar Posta Zrt.
 honlapjáról](http://www.posta.hu/ugyfelszolgalat/iranyitoszam_kereso)
 származnak.
-Frissítve: 2016. 07. 28.
+Frissítve: 2017. 07. 29.
 
 Példát a script működésére: http://loonkwil.github.com/jquery.zip-to-city
 
